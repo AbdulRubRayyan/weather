@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find the location. Try another place. ', undefined)
         } else {
             console.log(body.daily.data[0])
-            callback(undefined, ''+body.daily.data[0].summary+ ' It is currently '+body.currently.temperature+' degrees out. The minimum temperature can be '+body.daily.data[0].temperatureMin+' and the maximum can be '+body.daily.data[0].temperatureMax+'. There is a '+body.currently.precipProbability+'% chance of rain. ');
+            callback(undefined, ''+body.daily.data[0].summary+ ' It is currently '+body.currently.temperature+' degrees out. The minimum temperature can be '+body.daily.data[0].temperatureMin+' degrees and the maximum can be '+body.daily.data[0].temperatureMax+' degrees. There is a '+body.currently.precipProbability+'% chance of rain. ');
         }
     })
 }
